@@ -98,3 +98,31 @@ a {
 .nav__socials li {
   padding: 0.5em;
 }
+
+@media screen and (max-width: 800px) {
+  .nav__socials {
+    display: none;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0;
+    margin-top: 2rem;
+  }
+  .nav-toggle {
+    position: absolute;
+    right: 0.5em;
+  }
+  .nav__item {
+    transition: 0.3s ease;
+  }
+  .nav__item:hover {
+    padding-left: 1em;
+    transition: var(--transition);
+  }
+}
