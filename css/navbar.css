@@ -104,10 +104,9 @@ a {
     display: none;
   }
   nav {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 5rem auto;
   }
   .nav__list {
     flex-direction: column;
@@ -118,9 +117,8 @@ a {
     transition: var(--transition);
   }
   .nav-toggle {
-    position: absolute;
-    right: 1.2rem;
-    top: 1.5rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
   .nav__item {
     transition: 0.3s ease;
@@ -131,9 +129,8 @@ a {
   }
 }
 
-.show__links {
-  margin-top: 2rem;
+.show-links {
   overflow: auto;
-  height: auto;
+  height: 15rem;
   transition: var(--transition);
 }
