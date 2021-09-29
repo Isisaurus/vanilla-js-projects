@@ -83,6 +83,7 @@ a {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
+  display: none;
 }
 .nav-toggle:hover {
   color: var(--clr-primary-1);
@@ -117,6 +118,7 @@ a {
     transition: var(--transition);
   }
   .nav-toggle {
+    display: block;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
@@ -130,7 +132,6 @@ a {
 }
 
 .show-links {
-  overflow: auto;
   height: 15rem;
   transition: var(--transition);
 }
