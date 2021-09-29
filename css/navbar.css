@@ -120,6 +120,7 @@ a {
   .nav-toggle {
     position: absolute;
     right: 1.2rem;
+    top: 1.5rem;
   }
   .nav__item {
     transition: 0.3s ease;
