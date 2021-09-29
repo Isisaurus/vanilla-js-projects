@@ -48,7 +48,6 @@ let currentItem = 0;
 
 const showPerson = function (person) {
   const item = reviews[person];
-  console.log(item);
 
   img.src = item.img;
   author.textContent = item.name;
@@ -76,5 +75,16 @@ prevBtn.addEventListener("click", () => {
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
   }
+  showPerson(currentItem);
+});
+
+// show random person
+
+const getRandomPerson = function () {
+  return Math.floor(Math.random() * reviews.length);
+};
+
+randomBtn.addEventListener("click", () => {
+  currentItem = getRandomPerson();
   showPerson(currentItem);
 });
