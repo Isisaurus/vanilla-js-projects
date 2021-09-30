@@ -25,6 +25,7 @@
   align-items: center;
   color: #333;
   font-weight: bolder;
+  letter-spacing: 0.05em;
 }
 
 .question__text {
