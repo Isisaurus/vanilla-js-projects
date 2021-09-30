@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+.questions {
+  padding: 2rem 3rem;
+}
+
+.questions__title {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin: 2rem 0;
+  color: #293241;
+  font-size: 2.5rem;
+}
+
+.question {
+  background-color: white;
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.question__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  font-weight: bolder;
+}
+
+.question__text {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(41, 50, 65, 0.096);
+  padding-top: 1rem;
+  color: #333;
+}
+
+.btn__question {
+  border: none;
+  background: none;
+  color: #293241;
+  font-size: 2.5rem;
+}
+
+.btn__question i {
+  cursor: pointer;
+}
