@@ -1,5 +1,3 @@
-console.log("modal");
-
 // select buttons and overlay
 const modalBtn = document.querySelector(".modal__btn");
 const closeBtn = document.querySelector(".modal__close");
@@ -10,6 +8,5 @@ modalBtn.addEventListener("click", () => {
   modalOverlay.classList.add("modal-open");
 });
 closeBtn.addEventListener("click", () => {
-  console.log("close modal");
   modalOverlay.classList.remove("modal-open");
 });
