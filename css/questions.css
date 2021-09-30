@@ -33,6 +33,8 @@
   border-top: 1px solid rgba(41, 50, 65, 0.096);
   padding-top: 1rem;
   color: #333;
+
+  display: none;
 }
 
 .btn__question {
@@ -44,4 +46,23 @@
 
 .btn__question i {
   cursor: pointer;
+}
+
+.question__minus {
+  display: none;
+}
+
+/* class for showing question text */
+/* .show-text {
+  display: block;
+} */
+
+.show-text .question__text {
+  display: block;
+}
+.show-text .question__minus {
+  display: inline;
+}
+.show-text .question__plus {
+  display: none;
 }
