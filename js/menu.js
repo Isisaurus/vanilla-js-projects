@@ -73,7 +73,7 @@ const menu = [
   },
 ];
 
-const filterBtns = document.querySelectorAll("btn__filter");
+const filterBtns = document.querySelectorAll(".btn__filter");
 
 const container = document.querySelector(".menu__container");
 
@@ -104,3 +104,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // filtering
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    console.log(e.currentTarget.dataset);
+  });
+});
