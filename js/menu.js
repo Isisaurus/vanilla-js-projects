@@ -73,6 +73,8 @@ const menu = [
   },
 ];
 
+const filterBtns = document.querySelectorAll("btn__filter");
+
 const container = document.querySelector(".menu__container");
 
 const displayMenuItems = function (items) {
@@ -100,3 +102,5 @@ window.addEventListener("DOMContentLoaded", () => {
   const displayMenu = displayMenuItems(menu);
   container.insertAdjacentHTML("afterbegin", displayMenu);
 });
+
+// filtering
