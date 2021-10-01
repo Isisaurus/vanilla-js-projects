@@ -75,8 +75,8 @@ const menu = [
 
 const container = document.querySelector(".menu__container");
 
-window.addEventListener("DOMContentLoaded", () => {
-  let displayMenu = menu.map((el) => {
+const displayMenuItems = function (items) {
+  let displayMenu = items.map((el) => {
     return `
   <article class="menu_item">
     <img
@@ -93,5 +93,10 @@ window.addEventListener("DOMContentLoaded", () => {
 `;
   });
   displayMenu = displayMenu.join("");
+  return displayMenu;
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  const displayMenu = displayMenuItems(menu);
   container.insertAdjacentHTML("afterbegin", displayMenu);
 });
