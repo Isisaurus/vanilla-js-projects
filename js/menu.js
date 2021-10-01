@@ -77,35 +77,51 @@ const filterBtns = document.querySelectorAll(".btn__filter");
 
 const container = document.querySelector(".menu__container");
 
-const displayMenuItems = function (items) {
+const displayMenuItems = function (items, category = "all") {
   let displayMenu = items.map((el) => {
-    return `
-  <article class="menu_item">
-    <img
+    if (el.category === category) {
+      return `
+      <article class="menu_item">
+      <img
       src="${el.img}"
       alt="${el.title}"
       class="menu_item__img"
-    />
-    <header class="menu_item__info">
+      />
+      <header class="menu_item__info">
       <h4>${el.title}</h4>
       <h3 class="menu_item__price">${el.price}</h3>
-    </header>
-    <p class="menu_item__text">${el.desc}</p>
-  </article>
-`;
+      </header>
+      <p class="menu_item__text">${el.desc}</p>
+      </article>
+      `;
+    } else if (category === "all") {
+      return `
+      <article class="menu_item">
+      <img
+      src="${el.img}"
+      alt="${el.title}"
+      class="menu_item__img"
+      />
+      <header class="menu_item__info">
+      <h4>${el.title}</h4>
+      <h3 class="menu_item__price">${el.price}</h3>
+      </header>
+      <p class="menu_item__text">${el.desc}</p>
+      </article>
+      `;
+    }
   });
   displayMenu = displayMenu.join("");
-  return displayMenu;
+  container.innerHTML = displayMenu;
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  const displayMenu = displayMenuItems(menu);
-  container.insertAdjacentHTML("afterbegin", displayMenu);
+  displayMenuItems(menu);
 });
 
 // filtering
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    console.log(e.currentTarget.dataset);
+    displayMenuItems(menu, e.currentTarget.dataset.id);
   });
 });
