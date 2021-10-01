@@ -111,3 +111,13 @@
   color: var(--clr-black);
   font-size: 1.4rem;
 }
+
+.filter__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter__container :not(:last-child) {
+  margin-right: 1rem;
+}
