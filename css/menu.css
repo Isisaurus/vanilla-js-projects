@@ -83,8 +83,9 @@
 }
 
 .menu_item__img {
-  height: 25rem;
-  width: 25rem;
+  max-width: 25rem;
+  height: auto;
+  width: 100%;
   margin-bottom: 1rem;
 }
 

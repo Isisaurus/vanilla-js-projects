@@ -28,7 +28,7 @@ const menu = [
     title: "country delight",
     category: "breakfast",
     price: 20.99,
-    img: "./images/item-4.jpeg",
+    img: "https://images.pexels.com/photos/5638268/pexels-photo-5638268.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
   {
@@ -72,3 +72,26 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
+
+const container = document.querySelector(".menu__container");
+
+window.addEventListener("DOMContentLoaded", () => {
+  let displayMenu = menu.map((el) => {
+    return `
+  <article class="menu_item">
+    <img
+      src="${el.img}"
+      alt="${el.title}"
+      class="menu_item__img"
+    />
+    <header class="menu_item__info">
+      <h4>${el.title}</h4>
+      <h3 class="menu_item__price">${el.price}</h3>
+    </header>
+    <p class="menu_item__text">${el.desc}</p>
+  </article>
+`;
+  });
+  displayMenu = displayMenu.join("");
+  container.insertAdjacentHTML("afterbegin", displayMenu);
+});
